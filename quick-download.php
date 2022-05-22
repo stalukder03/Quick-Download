@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Quick Download
- * Description: Download Themes and Pluigns from WordPress Dashboard.
+ * Description: Download Themes and Pluigns directly from WordPress Dashboard.
  * Plugin URI: http://sajib.me/plugins/quick-download
  * Author: Sajib Talukder
  * Author URI: http://sajib.me
