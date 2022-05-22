@@ -1,0 +1,19 @@
+{
+    "name": "stalukder03/quick-download",
+    "description": "Download Themes and Pluigns from WordPress Dashboard",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Sajib Talukder",
+            "email": "hello@sajib.me"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Quick\\Download\\": "src/"
+        }
+    }
+}
