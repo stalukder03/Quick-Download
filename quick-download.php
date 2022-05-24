@@ -93,7 +93,7 @@ final class Quick_Download {
         if( is_user_logged_in() && current_user_can( 'switch_themes' ) && isset( $_GET['quick_download_theme'] ) && !empty( $_GET['quick_download_theme'] ) && array_key_exists( $_GET['quick_download_theme'], $themes ) ){
 
             // The name of theme slug
-            $theme_slug = $_GET['quick_download_theme'];
+            $theme_slug = sanitize_key($_GET['quick_download_theme']);
         
             // theme direcotry 
             $theme_dir = $this->get_theme_dir();
@@ -110,7 +110,7 @@ final class Quick_Download {
         if ( isset( $_GET['quick_download_plugin'] ) && is_user_logged_in() && current_user_can( 'activate_plugins' ) ) {
 
             // The name of plugin slug
-            $plugin_slug = $_GET['quick_download_plugin'];
+            $plugin_slug = sanitize_key($_GET['quick_download_plugin']);
         
             // plugin direcotry
             $plugin_dir = $this->get_plugin_dir();
@@ -181,7 +181,7 @@ final class Quick_Download {
      */
     public function get_plugin_dir( $status = false ) {
         if ( ! $status ) {
-            $status = ( isset( $_GET['quick_download_plugin_status'] ) ? $_GET['quick_download_plugin_status'] : 'plugin' );
+            $status = ( isset( $_GET['quick_download_plugin_status'] ) ? sanitize_key($_GET['quick_download_plugin_status']) : 'plugin' );
         }
         switch ( $status ) {
             case 'mustuse':
