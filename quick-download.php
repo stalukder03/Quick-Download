@@ -54,12 +54,12 @@ final class Quick_Download {
 	 * @return void
 	 */
 	public function define_constants() {
-		define( 'QD_VERSION', self::version );    
-		define( 'QD_FILE', __FILE__ );    
-		define( 'QD_PATH', __DIR__ );    
-		define( 'QD_URL', plugins_url( '', QD_FILE ) );    
-		define( 'QD_ASSETS', QD_URL . '/assets' );    
-	}
+		define( 'QUICK_DOWNLOAD_VERSION', self::version );
+		define( 'QUICK_DOWNLOAD_FILE', __FILE__ );
+		define( 'QUICK_DOWNLOAD_PATH', __DIR__ );
+		define( 'QUICK_DOWNLOAD_URL', plugins_url( '', QUICK_DOWNLOAD_FILE ) );
+		define( 'QUICK_DOWNLOAD_ASSETS', QUICK_DOWNLOAD_URL . '/assets' );
+    }
 
 
 	public function init_plugin() {
@@ -209,7 +209,7 @@ final class Quick_Download {
 		if( !$installed ){
 			update_option( 'quick_download_installed', time() );
 		}
-		update_option( 'quick_download_version', QD_VERSION );
+		update_option( 'quick_download_version', QUICK_DOWNLOAD_VERSION );
 	}
 }
 

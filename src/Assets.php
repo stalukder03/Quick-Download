@@ -15,13 +15,13 @@ class Assets {
         if( $hook == 'themes.php' ){
             wp_enqueue_script(
                 'quick-theme-download-links',
-                QD_ASSETS . '/js/script.js',
+                QUICK_DOWNLOAD_ASSETS . '/js/script.js',
                 [ 'jquery' ],
-                md5_file( QD_ASSETS . '/js/script.js' ),
+                md5_file( QUICK_DOWNLOAD_ASSETS . '/js/script.js' ),
                 true
             );
 
-            wp_localize_script( 'quick-theme-download-links', 'qd_obj', array(
+            wp_localize_script( 'quick-theme-download-links', 'quick_download_obj', array(
                 'download_button_label' => __( 'Download ZIP', 'quick-download' ),
             ) );
         }
