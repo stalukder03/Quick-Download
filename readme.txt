@@ -1,4 +1,4 @@
-=== Quick Download ===
+=== Quick Download - Themes and Plugins from WP Dashboard ===
 Contributors: stalukder03, wpxon
 Tags: download, plugin, theme, zip, dashboard, Download theme, Download plugin, Download plugin from dashboard, Download theme from dashboard
 Tested up to: 5.9
